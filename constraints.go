@@ -1,6 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"encoding/json"
+	"fmt"
+	"io/ioutil"
+	"os"
+)
+
+func getEuMembers() map[string]bool {
+	membersFile, err := os.Open("euMembers.json")
+	if err != nil {
+		fmt.Println(err)
+	}
+	fileInBytes, _ := ioutil.ReadAll(membersFile)
+	membersFile.Close()
+	var membersMap map[string]bool
+	json.Unmarshal([]byte(fileInBytes), &membersMap)
+	return membersMap
+}
 
 func WeightConstraint(s *ShipmentInput) (float64, string) {
 	switch {
