@@ -84,5 +84,5 @@ func PostHandler(c *gin.Context) {
 		return
 	}
 
-	c.JSON(200, gin.H{"price": price})
+	c.JSON(200, gin.H{"input": shipment, "price": price})
 }
