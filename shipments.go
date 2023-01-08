@@ -1,9 +1,9 @@
 package main
 
 type ShipmentInput struct {
-	sender   string  // ISO-3166-1 alpha-2
-	receiver string  // ISO-3166-1 alpha-2
-	weight   float32 // in Kg
+	Sender   string  // ISO-3166-1 alpha-2
+	Receiver string  // ISO-3166-1 alpha-2
+	Weight   float32 // in Kg
 }
 
 type ShipmentResponse struct {
