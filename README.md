@@ -19,3 +19,24 @@ GET /shipments -> Lists all shipments registered
 POST /shipments -> Create a shipents with a price generated according to given pricing rules
 ```
 
+# Testing?
+
+Due to timing issues, there were no tests added to systematically check for the correct behaviour of the system.
+
+# How to build it?
+
+Make sure you have Golang installed in your machine.
+
+Then run:
+
+```
+go build .
+```
+
+It is going to create an executable for the project.
+
+Execute it with the following command:
+
+`./shipping-api`
+
+Now you have the application running on `localhost:8080`
