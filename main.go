@@ -24,11 +24,9 @@ func getEuMembers() map[string]bool {
 
 func main() {
 	r := gin.Default()
-	euMembers := getEuMembers()
 
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, euMembers)
-	})
+	r.GET("/shipments", GetHandler)
+	r.POST("/shipments", PostHandler)
 
 	r.Run()
 }
